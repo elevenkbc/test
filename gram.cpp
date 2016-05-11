@@ -1,24 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-int show;
-int main(void) 
+
+int show(double *A, int n1, int n2);
+int main() 
 {
 	double *A;
-	*A = (double*)malloc(5*3*sizeof(double));
+	A = (double*)malloc(7*5*sizeof(double));
+	
 	int i;
-	for(i=0;i<15;i++)
+	for(i=0;i<7*5;i++)
 	{
-	A[i]=i;
+		A[i]=i;
 	}
 	
 
-	show(*A,5,3);
+
 	
-	system("Pause");
+
 	return 0;
 }
-int show(double *A,int n1,int n2)
+int gram(double *A, double *Q, double *R, int n1, int n2)
+{
+	
+}
+int show(double *A, int n1, int n2)
 {
 	int i;
 	int j;
@@ -26,7 +32,7 @@ int show(double *A,int n1,int n2)
 	{
 		for(j=0;j<n2;j++)
 		{
-			printf("%f ",A[n1*i+j]);
+			printf("%f ",A[i+j*n1]);
 		}
 		printf("\n");
 	}
